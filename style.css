@@ -1,4 +1,3 @@
-/* Base Reset & Body */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +16,7 @@ body {
   color: #fff;
 }
 
-/* Weather Form */
+
 .weatherForm {
   display: flex;
   gap: 12px;
@@ -32,7 +31,6 @@ body {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Input Styling */
 .weatherForm input.cityName {
   padding: 12px 18px;
   border: 2px solid rgba(255, 255, 255, 0.3);
@@ -55,7 +53,7 @@ body {
   background-color: rgba(255, 255, 255, 0.05);
 }
 
-/* Button Styling */
+
 .weatherForm button {
   padding: 12px 18px;
   background: linear-gradient(to right, #00bcd4, #2196f3);
@@ -74,7 +72,7 @@ body {
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
 
-/* Weather Data Box */
+
 .weatherData {
   background: rgba(255, 255, 255, 0.15);
   border-radius: 20px;
@@ -88,7 +86,6 @@ body {
   animation: fadeIn 0.5s ease-in-out;
 }
 
-/* Weather Text */
 .weatherData h1 {
   font-size: 2rem;
   margin-bottom: 10px;
@@ -100,7 +97,7 @@ body {
   line-height: 1.5;
 }
 
-/* Simple fade animation */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -112,7 +109,6 @@ body {
   }
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 500px) {
   .weatherForm {
     flex-direction: column;
