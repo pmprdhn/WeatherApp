@@ -1,0 +1,126 @@
+/* Base Reset & Body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to top right, #1cb5e0, #000046);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  color: #fff;
+}
+
+/* Weather Form */
+.weatherForm {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Input Styling */
+.weatherForm input.cityName {
+  padding: 12px 18px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  outline: none;
+  width: 240px;
+  transition: all 0.3s ease;
+}
+
+.weatherForm input.cityName::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-style: italic;
+}
+
+.weatherForm input.cityName:focus {
+  border-color: #00ffe0;
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Button Styling */
+.weatherForm button {
+  padding: 12px 18px;
+  background: linear-gradient(to right, #00bcd4, #2196f3);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  font-weight: bold;
+}
+
+.weatherForm button:hover {
+  background: linear-gradient(to right, #0097a7, #1976d2);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Weather Data Box */
+.weatherData {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  padding: 30px;
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  color: white;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Weather Text */
+.weatherData h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.weatherData p {
+  font-size: 1.2rem;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+/* Simple fade animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  } 
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 500px) {
+  .weatherForm {
+    flex-direction: column;
+  }
+
+  .weatherForm input.cityName,
+  .weatherForm button {
+    width: 100%;
+    max-width: 300px;
+  }
+}
